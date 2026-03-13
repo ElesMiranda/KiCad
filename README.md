@@ -1,5 +1,6 @@
 
-# ![KiCad](https://github.com/ElesMiranda/KiCad/blob/22c7a669ff83ff7aaefdd80c4e8010d020c92bd8/KiCad-Logo.svg.png) 
+![image alt](https://github.com/ElesMiranda/KiCad/blob/890e335e01759f325c129828a6f409cf6a92cdd2/OIP.webp)
+# KiCad
 # Diseño Electrónico en KiCad - SAFI
 
 Bienvenido al repositorio oficial de recursos y diseño electrónico del **Capítulo Estudiantil SAFI**. 
@@ -20,8 +21,8 @@ Para asegurar la calidad y compatibilidad en todos los proyectos de ingeniería 
 Fomentamos una cultura de "Hazlo tú mismo" (DIY). Nuestro flujo de trabajo oficial para llevar los diseños de la pantalla a la placa de baquelita es:
 
 1. **[KiCad](https://www.kicad.org/):** Creación del diagrama esquemático, ruteo de la PCB y exportación de archivos Gerber.
-2. **FlatCAM:** Procesamiento de los Gerbers para generar las trayectorias de la herramienta (G-code) aislando las pistas.
-3. **Candle (Router CNC):** Control de la máquina CNC para el fresado de pistas, perforación de agujeros (drill) y corte del contorno de la placa.
+2. **[FlatCAM 8.991](https://drive.google.com/file/d/1pwMMPqekb8oLhkwjraOCaSqU5r90mv8D/view?usp=drive_link):** Procesamiento de los Gerbers para generar las trayectorias de la herramienta (G-code) aislando las pistas.
+3. **[Candle](https://drive.google.com/drive/folders/1Qzr3Ldz9wdj51mxDhc2Xyh02n26Dh03L?usp=drive_link):** Control de la máquina CNC para el fresado de pistas, perforación de agujeros (drill) y corte del contorno de la placa.
 
 ## 📁 Estructura del Repositorio
 
