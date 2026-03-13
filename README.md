@@ -1,5 +1,5 @@
 
-![image alt](https://github.com/ElesMiranda/KiCad/blob/890e335e01759f325c129828a6f409cf6a92cdd2/OIP.webp)
+![image alt](https://github.com/ElesMiranda/KiCad/blob/de9abb0835c7448ff5e271732b93d7ed82d53e9a/Imag/KiCad-Logo.svg.png)
 # KiCad
 # Diseño Electrónico en KiCad - SAFI
 
