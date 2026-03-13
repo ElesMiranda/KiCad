@@ -36,8 +36,5 @@ Si eres parte del equipo de electrónica y vas a contribuir a este repositorio:
 1. Sincroniza siempre tu carpeta local antes de abrir KiCad abriendo tu terminal y ejecutando: `git pull origin main`.
 2. Si diseñas un símbolo o footprint nuevo, asegúrate de guardarlo en la carpeta `/Bibliotecas_Capitulo` para que el resto del equipo pueda aprovecharlo.
 3. Guarda tus avances constantemente y haz commits descriptivos (ej. `git commit -m "Agregada guía de grosores de pista para FlatCAM"`).
-
-Altium Designer>>>>>>>>>>>>KiCad
-
 ---
 *Repositorio mantenido por el área de Electrónica del Capítulo. ¡El limite son las estrellas!* 
