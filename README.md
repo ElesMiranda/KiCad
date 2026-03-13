@@ -1,5 +1,4 @@
 
-=======
 # ![KiCad](https://github.com/ElesMiranda/KiCad/blob/890e335e01759f325c129828a6f409cf6a92cdd2/OIP.webp) 
 # Diseño Electrónico en KiCad - SAFI
 
