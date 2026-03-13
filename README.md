@@ -1,5 +1,5 @@
 
-# ![KiCad](https://github.com/ElesMiranda/KiCad/blob/890e335e01759f325c129828a6f409cf6a92cdd2/OIP.webp) 
+# ![KiCad]([https://github.com/ElesMiranda/KiCad/blob/890e335e01759f325c129828a6f409cf6a92cdd2/OIP.webp](https://github.com/ElesMiranda/KiCad/blob/09161c4fdf0a0485e487db5916172ed2cdde5a94/KiCad-Logo.svg.png)) 
 # Diseño Electrónico en KiCad - SAFI
 
 Bienvenido al repositorio oficial de recursos y diseño electrónico del **Capítulo Estudiantil SAFI**. 
