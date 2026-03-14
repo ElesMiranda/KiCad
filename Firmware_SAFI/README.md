@@ -14,17 +14,17 @@ El objetivo de esta sección es centralizar los códigos fuente, librerías y di
 
 Nuestra computadora de vuelo modular distribuye el procesamiento para evitar cuellos de botella durante el ascenso. Haz clic en el nombre de cada placa para ver sus códigos de inicialización:
 
-* **[ESP32]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DEL_ESP32]):** Computadora central. Encargada del procesamiento pesado, filtros matemáticos y empaquetado de telemetría.
+* **[ESP32]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DEL_ESP32]):** Computadora central. Encargada del procesamiento pesado, filtros matemáticos y empaquetado de telemetría. <br> 📚 *[Ver documentación y Pinout oficial](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)*
   <p align="center">
     <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/ESP32.jpg" alt="ESP32" width="200">
   </p>
 
-* **[Arduino Nano]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DEL_NANO]):** Nodos satélite y redundancia. Manejo de actuadores (transistores, ignición, despliegue).
+* **[Arduino Nano]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DEL_NANO]):** Nodos satélite y redundancia. Manejo de actuadores (transistores, ignición, despliegue). <br> 📚 *[Ver documentación y Pinout oficial](https://docs.arduino.cc/hardware/nano)*
   <p align="center">
     <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/ARDUINONANO.jpg" alt="Arduino Nano" width="200">
   </p>
 
-* **[Raspberry Pi Pico]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DE_LA_PICO]):** Adquisición de datos a alta velocidad y manejo de E/S.
+* **[Raspberry Pi Pico]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DE_LA_PICO]):** Adquisición de datos a alta velocidad y manejo de E/S. <br> 📚 *[Ver documentación y Pinout oficial](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)*
   <p align="center">
     <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/raspberry.jpg" alt="Raspberry Pi Pico" width="200">
   </p>
