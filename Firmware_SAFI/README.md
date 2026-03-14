@@ -38,8 +38,8 @@ Para garantizar la lectura de sensores sin bloqueos de código, utilizamos tres 
 </p>
 
 **Módulos I2C en la computadora de vuelo:**
-* 🧭 **IMU MPU6050:** Detección de orientación, aceleración y giroscopio. <br> `<img src="[https://github.com/ElesMiranda/KiCad/blob/0aaa190fb964ae8483ca4dc7ebf6a86f8bd0ef96/Imag/MPU6050.jpg]" width="100">`
-* ☁️ **Barómetro MS5611:** Cálculo de altitud para eventos de recuperación. <br> `<img src="[https://github.com/ElesMiranda/KiCad/blob/0aaa190fb964ae8483ca4dc7ebf6a86f8bd0ef96/Imag/MS5611.jpg]" width="100">`
+* 🧭 **IMU MPU6050:** Detección de orientación, aceleración y giroscopio. <br> `<img src="https://github.com/ElesMiranda/KiCad/blob/0aaa190fb964ae8483ca4dc7ebf6a86f8bd0ef96/Imag/MPU6050.jpg" width="100">`
+* ☁️ **Barómetro MS5611:** Cálculo de altitud para eventos de recuperación. <br> `<img src="https://github.com/ElesMiranda/KiCad/blob/0aaa190fb964ae8483ca4dc7ebf6a86f8bd0ef96/Imag/MS5611.jpg" width="100">`
 * 📁 **[Haz clic aquí para ver los códigos y librerías I2C]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_I2C])**
 
 ---
