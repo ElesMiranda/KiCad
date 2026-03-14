@@ -15,9 +15,9 @@ El objetivo de esta sección es centralizar los códigos fuente, librerías y di
 Nuestra computadora de vuelo modular distribuye el procesamiento para evitar cuellos de botella durante el ascenso. Haz clic en las carpetas para ver los códigos de inicialización de cada uno:
 
 <p align="center">
-  <img src="[PON_AQUI_FOTO_DEL_ESP32.jpg]" alt="ESP32" width="200">
-  <img src="[PON_AQUI_FOTO_DEL_NANO.jpg]" alt="Arduino Nano" width="200">
-  <img src="[PON_AQUI_FOTO_DE_LA_PICO.jpg]" alt="Raspberry Pi Pico" width="200">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/7edfff343a3041ed3f5dce4ab5603e5824f6c0f7/Imag/ESP32.webp" alt="ESP32" width="200">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/7edfff343a3041ed3f5dce4ab5603e5824f6c0f7/Imag/Arduino%20nano.webp" alt="Arduino Nano" width="200">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/7edfff343a3041ed3f5dce4ab5603e5824f6c0f7/Imag/raspberry%20pi%20pico.webp" alt="Raspberry Pi Pico" width="200">
 </p>
 
 * **[ESP32]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DEL_ESP32]):** Computadora central. Encargada del procesamiento pesado, filtros matemáticos y empaquetado de telemetría.
