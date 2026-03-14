@@ -1,4 +1,4 @@
-# 🧠 Firmware y Protocolos de Comunicación - Aviónica LANIAKEA
+Firmware y Protocolos de Comunicación - Aviónica LANIAKEA
 
 <p align="center">
   <img src="[PON_AQUI_TU_FOTO_DE_PORTADA.jpg]" alt="Banner de Firmware SAFI" width="800">
