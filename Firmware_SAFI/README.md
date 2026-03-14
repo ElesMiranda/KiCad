@@ -12,17 +12,22 @@ El objetivo de esta sección es centralizar los códigos fuente, librerías y di
 
 ## 🚀 Arquitectura de Microcontroladores (MCUs)
 
-Nuestra computadora de vuelo modular distribuye el procesamiento para evitar cuellos de botella durante el ascenso. Haz clic en las carpetas para ver los códigos de inicialización de cada uno:
-
-<p align="center">
-  <img src="https://github.com/ElesMiranda/KiCad/blob/c04f6c85eeeb62f4c57c6a5ba0d0a970e9f33b1c/Imag/ESP32.jpg" alt="ESP32" width="200">
-  <img src="https://github.com/ElesMiranda/KiCad/blob/c04f6c85eeeb62f4c57c6a5ba0d0a970e9f33b1c/Imag/ARDUINONANO.jpg" alt="Arduino Nano" width="200">
-  <img src="https://github.com/ElesMiranda/KiCad/blob/c04f6c85eeeb62f4c57c6a5ba0d0a970e9f33b1c/Imag/raspberry.jpg" alt="Raspberry Pi Pico" width="200">
-</p>
+Nuestra computadora de vuelo modular distribuye el procesamiento para evitar cuellos de botella durante el ascenso. Haz clic en el nombre de cada placa para ver sus códigos de inicialización:
 
 * **[ESP32]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DEL_ESP32]):** Computadora central. Encargada del procesamiento pesado, filtros matemáticos y empaquetado de telemetría.
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/ESP32.jpg" alt="ESP32" width="200">
+  </p>
+
 * **[Arduino Nano]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DEL_NANO]):** Nodos satélite y redundancia. Manejo de actuadores (transistores, ignición, despliegue).
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/ARDUINONANO.jpg" alt="Arduino Nano" width="200">
+  </p>
+
 * **[Raspberry Pi Pico]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_DE_LA_PICO]):** Adquisición de datos a alta velocidad y manejo de E/S.
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/raspberry.jpg" alt="Raspberry Pi Pico" width="200">
+  </p>
 
 ---
 
