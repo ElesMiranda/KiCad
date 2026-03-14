@@ -5,8 +5,8 @@
   <img src="[PON_AQUI_TU_FOTO_DE_PORTADA.jpg]" alt="Banner de Firmware SAFI" width="800">
 </p>
 
-> **Nota de Elesvan Miranda:**
-> ¡Bienvenidos, equipo! He estructurado este directorio de programación con el objetivo de centralizar todos nuestros códigos fuente, librerías y diagramas de conexión. Aquí documentaremos el cerebro de nuestra computadora de vuelo para asegurar lecturas precisas y telemetría en tiempo real rumbo al **Latin American Space Challenge (LASC)**.
+> **Elesvan Miranda:**
+> ¡Bienvenidos, equipo! He estructurado este directorio de programación con el objetivo de centralizar todos nuestros códigos fuente, librerías y diagramas de conexión. Aquí documentaremos el cerebro de nuestra computadora de vuelo.
 > 
 > **Apogeo Objetivo:** `3,000 metros`
 
