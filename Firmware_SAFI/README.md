@@ -34,12 +34,12 @@ Para garantizar la lectura de sensores sin bloqueos de código, utilizamos tres 
 **¿Cómo funciona?** Es un protocolo síncrono maestro-esclavo ideal para conectar múltiples sensores en la misma placa usando solo dos cables (SDA y SCL). Requiere resistencias Pull-Up.
 
 <p align="center">
-  <img src="[https://github.com/ElesMiranda/KiCad/blob/0aaa190fb964ae8483ca4dc7ebf6a86f8bd0ef96/Imag/I2C.jpg]" alt="Diagrama I2C" width="400">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/62ddf35a510c8c9015bc60d5530919ea7a905f15/Imag/I2C.jpg" alt="Diagrama I2C" width="400">
 </p>
 
 **Módulos I2C en la computadora de vuelo:**
-* 🧭 **IMU MPU6050:** Detección de orientación, aceleración y giroscopio. <br> `<img src="[https://github.com/ElesMiranda/KiCad/blob/0aaa190fb964ae8483ca4dc7ebf6a86f8bd0ef96/Imag/MPU6050.jpg]" width="100">`
-* ☁️ **Barómetro MS5611:** Cálculo de altitud para eventos de recuperación. <br> `<img src="[https://github.com/ElesMiranda/KiCad/blob/0aaa190fb964ae8483ca4dc7ebf6a86f8bd0ef96/Imag/MS5611.jpg]" width="100">`
+* 🧭 **IMU MPU6050:** Detección de orientación, aceleración y giroscopio. <br> <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/MPU6050.jpg" width="100">
+* ☁️ **Barómetro MS5611:** Cálculo de altitud para eventos de recuperación. <br> <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/MS5611.jpg" width="100">
 * 📁 **[Haz clic aquí para ver los códigos y librerías I2C]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_I2C])**
 
 ---
