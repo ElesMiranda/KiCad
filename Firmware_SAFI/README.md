@@ -14,7 +14,7 @@
 
 ## Arquitectura de Microcontroladores
 
-Nuestra computadora de vuelo modular distribuye el procesamiento para evitar cuellos de botella durante la fase de ascenso y recuperación. 
+Nuestra computadora de vuelo distribuye el procesamiento para evitar cuellos de botella durante la fase de ascenso y recuperación. 
 
 Selecciona el núcleo para acceder a sus códigos de inicialización:
 
