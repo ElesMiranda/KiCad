@@ -2,7 +2,7 @@
 <h3 align="center">Proyecto LANIAKEA | Capítulo SAFI</h3>
 
 <p align="center">
-  <img src="[PON_AQUI_TU_FOTO_DE_PORTADA.jpg]" alt="Banner de Firmware SAFI" width="800">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/3a6db8ffc411503813be159581c3d66bf0790fb9/Imag/Captura%20de%20pantalla%202026-03-13%20231730.png" alt="Banner de Firmware SAFI" width="800">
 </p>
 
 > **Elesvan Miranda:**
