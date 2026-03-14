@@ -54,12 +54,12 @@ Para garantizar la lectura de sensores sin bloqueos de código, utilizamos tres 
 ⚠️ **Regla de oro:** ¡Se conectan cruzados! El **TX** del sensor va al **RX** del microcontrolador, y viceversa.
 
 <p align="center">
-  <img src="[PON_AQUI_TU_DIAGRAMA_UART.png]" alt="Diagrama UART" width="400">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/504349017b731b3eab91ed698a9bc426356d85ff/Imag/UART.png" alt="Diagrama UART" width="400">
 </p>
 
 **Módulos UART en la computadora de vuelo:**
-* 📡 **Radio XBee Pro S2C:** Telemetría de largo alcance hacia la estación terrena. <br> `<img src="[PON_AQUI_FOTO_DEL_XBEE.jpg]" width="100">`
-* 📍 **GPS RYS352A:** Obtención de coordenadas para la fase de recuperación. <br> `<img src="[PON_AQUI_FOTO_DEL_GPS.jpg]" width="100">`
+* 📡 **Radio XBee Pro S2C:** Telemetría de largo alcance hacia la estación terrena. <br> `<img src="https://github.com/ElesMiranda/KiCad/blob/504349017b731b3eab91ed698a9bc426356d85ff/Imag/Radio%20XBee%20Pro%20S2C.jpg" width="100">`
+* 📍 **GPS RYS352A:** Obtención de coordenadas para la fase de recuperación. <br> `<img src="https://github.com/ElesMiranda/KiCad/blob/504349017b731b3eab91ed698a9bc426356d85ff/Imag/GPS%20RYS352A.webp" width="100">`
 * 📁 **[Haz clic aquí para ver los códigos de Telemetría UART]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_UART])**
 
 ---
