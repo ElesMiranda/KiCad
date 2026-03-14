@@ -39,12 +39,21 @@ Para garantizar la lectura de sensores sin bloqueos de código, utilizamos tres 
 **¿Cómo funciona?** Es un protocolo síncrono maestro-esclavo ideal para conectar múltiples sensores en la misma placa usando solo dos cables (SDA y SCL). Requiere resistencias Pull-Up.
 
 <p align="center">
-  <img src="https://github.com/ElesMiranda/KiCad/blob/62ddf35a510c8c9015bc60d5530919ea7a905f15/Imag/I2C.jpg" alt="Diagrama I2C" width="400">
+  <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/I2C.jpg" alt="Diagrama I2C" width="400">
 </p>
 
 **Módulos I2C en la computadora de vuelo:**
-* 🧭 **IMU MPU6050:** Detección de orientación, aceleración y giroscopio. <br> <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/MPU6050.jpg" width="100">
-* ☁️ **Barómetro MS5611:** Cálculo de altitud para eventos de recuperación. <br> <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/MS5611.jpg" width="100">
+
+* 🧭 **IMU MPU6050:** Detección de orientación, aceleración y giroscopio.
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/MPU6050.jpg" alt="MPU6050" width="100">
+  </p>
+
+* ☁️ **Barómetro MS5611:** Cálculo de altitud para eventos de recuperación.
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/MS5611.jpg" alt="MS5611" width="100">
+  </p>
+
 * 📁 **[Haz clic aquí para ver los códigos y librerías I2C]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_I2C])**
 
 ---
@@ -54,12 +63,21 @@ Para garantizar la lectura de sensores sin bloqueos de código, utilizamos tres 
 ⚠️ **Regla de oro:** ¡Se conectan cruzados! El **TX** del sensor va al **RX** del microcontrolador, y viceversa.
 
 <p align="center">
-  <img src="https://github.com/ElesMiranda/KiCad/blob/504349017b731b3eab91ed698a9bc426356d85ff/Imag/UART.png" alt="Diagrama UART" width="400">
+  <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/UART.png" alt="Diagrama UART" width="400">
 </p>
 
 **Módulos UART en la computadora de vuelo:**
-* 📡 **Radio XBee Pro S2C:** Telemetría de largo alcance hacia la estación terrena. <br> `<img src="https://github.com/ElesMiranda/KiCad/blob/504349017b731b3eab91ed698a9bc426356d85ff/Imag/Radio%20XBee%20Pro%20S2C.jpg" width="100">`
-* 📍 **GPS RYS352A:** Obtención de coordenadas para la fase de recuperación. <br> `<img src="https://github.com/ElesMiranda/KiCad/blob/504349017b731b3eab91ed698a9bc426356d85ff/Imag/GPS%20RYS352A.webp" width="100">`
+
+* 📡 **Radio XBee Pro S2C:** Telemetría de largo alcance hacia la estación terrena.
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/Radio%20XBee%20Pro%20S2C.jpg" alt="Radio XBee Pro S2C" width="100">
+  </p>
+
+* 📍 **GPS RYS352A:** Obtención de coordenadas para la fase de recuperación.
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/GPS%20RYS352A.webp" alt="GPS RYS352A" width="100">
+  </p>
+
 * 📁 **[Haz clic aquí para ver los códigos de Telemetría UART]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_UART])**
 
 ---
