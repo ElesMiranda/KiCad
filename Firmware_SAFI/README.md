@@ -86,11 +86,16 @@ Para garantizar la lectura de sensores sin bloqueos de código, utilizamos tres 
 **¿Cómo funciona?** Es un protocolo síncrono de muy alta velocidad, ideal para enviar o recibir bloques masivos de información de forma simultánea (Pines: MOSI, MISO, SCK, CS).
 
 <p align="center">
-  <img src="[PON_AQUI_TU_DIAGRAMA_SPI.png]" alt="Diagrama SPI" width="400">
+  <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/SPI.png" alt="Diagrama SPI" width="400">
 </p>
 
 **Módulos SPI en la computadora de vuelo:**
-* 💾 **Módulo Adaptador MicroSD:** Datalogger ("Caja Negra") para registrar todas las variables a alta frecuencia durante el ascenso. <br> `<img src="[PON_AQUI_FOTO_DE_LA_MICROSD.jpg]" width="100">`
+
+* 💾 **Módulo Adaptador MicroSD:** Datalogger ("Caja Negra") para registrar todas las variables a alta frecuencia durante el ascenso.
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/SD.jpg" alt="Módulo MicroSD" width="100">
+  </p>
+
 * 📁 **[Haz clic aquí para ver los códigos del Datalogger SPI]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_SPI])**
 
 ---
