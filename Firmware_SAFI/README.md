@@ -6,7 +6,7 @@
 </p>
 
 > **Elesvan Miranda:**
-> ¡Bienvenidos, equipo! He estructurado este directorio de programación con el objetivo de centralizar todos nuestros códigos fuente, librerías y diagramas de conexión. Aquí documentaremos el cerebro de nuestra computadora de vuelo.
+> ¡Bienvenidos, equipo! He estructurado este directorio de programación con el objetivo de centralizar todos nuestros códigos fuente, librerías y diagramas de conexión. Aquí documentaremos el cerebro de nuestra computadora de vuelo para asegurar lecturas precisas y telemetría en tiempo real. Entender la teoría detrás de estos protocolos es fundamental para dejar de adivinar por qué un sensor no funciona y empezar a diagnosticar como verdaderos ingenieros.
 > 
 > **Apogeo Objetivo:** `3,000 metros`
 
@@ -41,25 +41,42 @@ Selecciona el núcleo para acceder a sus códigos de inicialización:
 
 ---
 
-## Protocolos de Comunicación y Periféricos
+## Fundamentos de Comunicación Digital
 
-Para garantizar la lectura de sensores sin bloqueos en el hilo principal de ejecución, la arquitectura LANIAKEA se divide en tres buses principales.
+Los protocolos de comunicación son las normativas que permiten que dos o más dispositivos intercambien datos de manera ordenada. Sin ellos, los pulsos eléctricos serían solo ruido. En aviónica, clasificamos estos buses bajo tres criterios principales:
+
+1. **Sincronización:** * **Síncronos:** Utilizan una línea de "Reloj" (`SCK` o `SCL`). El maestro dicta el ritmo exacto de lectura (SPI, I2C).
+   * **Asíncronos:** No hay reloj externo. Ambos dispositivos acuerdan una velocidad previa en baudios (UART).
+2. **Dirección de flujo:** * **Half-Duplex:** Ambos hablan, pero no al mismo tiempo, similar a un radio transmisor (I2C, RS-485).
+   * **Full-Duplex:** Transmisión y recepción simultánea (SPI, UART).
+3. **Topología:** Punto a Punto (UART) o Bus Multidireccional Maestro-Esclavo (SPI, I2C).
+
+---
+
+## Protocolos de Comunicación y Periféricos LANIAKEA
 
 > **ADVERTENCIA DE INTEGRACIÓN:** Verifique estrictamente los niveles lógicos de voltaje (`3.3V` vs `5V`) antes de interconectar módulos. Ignorar esto resultará en daño permanente al silicio.
 
 ### 1. Bus I2C (Inter-Integrated Circuit)
-Protocolo síncrono maestro-esclavo implementado para el arreglo de sensores en placa. Utiliza dos líneas de datos: `SDA` y `SCL`. Requiere la implementación física de resistencias Pull-Up.
+**Origen:** Inventado en 1982 por Philips Semiconductor para reducir la cantidad de cables en televisores, permitiendo conectar múltiples dispositivos en una misma placa usando solo 2 cables.
+<br>**Clasificación:** Serial, Síncrono, Half-Duplex, Bus Multidireccional.
+
+**Anatomía de la capa física:**
+* `SDA` (Serial Data): Única línea por donde viaja la información de ida y vuelta.
+* `SCL` (Serial Clock): Señal de sincronización dictada por el maestro.
+* **Direccionamiento:** I2C no usa pines habilitadores físicos. El maestro envía un paquete hexadecimal (ej. `0x68`); solo el esclavo con esa dirección de fábrica responde.
+* **Resistencias Pull-Up:** La arquitectura interna es *Open-Drain*. Los chips pueden llevar el voltaje a `0V`, pero requieren resistencias físicas conectadas a VCC para retornar al estado "alto". Sin ellas, la línea flota y la comunicación falla.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/I2C.jpg" alt="Diagrama I2C" width="400">
 </p>
 
 **Módulos Integrados:**
-* **IMU MPU6050:** Orientación espacial, aceleración y giroscopio de 6 ejes.
+* **IMU MPU6050:** Orientación espacial, aceleración y giroscopio.
   <p align="center">
     <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/MPU6050.jpg" alt="MPU6050" width="100">
   </p>
-* **Barómetro MS5611:** Altímetro de alta precisión para la detección del apogeo y activación de eventos de recuperación.
+* **Barómetro MS5611:** Altímetro de precisión para detección de apogeo.
   <p align="center">
     <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/MS5611.jpg" alt="MS5611" width="100">
   </p>
@@ -68,8 +85,15 @@ Protocolo síncrono maestro-esclavo implementado para el arreglo de sensores en 
 
 ---
 
-### 2. Bus UART (Serial Asíncrono)
-Comunicación asíncrona punto a punto. La topología de conexión exige el cruce de las líneas lógicas: el pin `TX` (Transmisión) del periférico debe ir al `RX` (Recepción) del microcontrolador, y viceversa.
+### 2. Bus UART (Universal Asynchronous Receiver-Transmitter)
+**Origen:** El protocolo más antiguo, derivado de los teletipos de 1960. Diseñado para transmitir texto a largas distancias donde una señal de reloj se degradaría.
+<br>**Clasificación:** Serial, Asíncrono, Full-Duplex, Punto a Punto.
+
+**Anatomía de la capa física:**
+* `TX` (Transmit): Pin de salida de datos.
+* `RX` (Receive): Pin de entrada de datos.
+* **Cruce de Líneas:** Exige conexión cruzada. El `TX` del sensor debe ir al `RX` del microcontrolador. Conectar TX con TX causa colisiones de voltaje.
+* **Baud Rate:** Al carecer de reloj, la información se agrupa en tramas (con bits de inicio y parada). Emisor y receptor deben estar rigurosamente configurados a la misma velocidad (ej. `9600` o `115200` bps).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/UART.png" alt="Diagrama UART" width="400">
@@ -80,7 +104,7 @@ Comunicación asíncrona punto a punto. La topología de conexión exige el cruc
   <p align="center">
     <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/Radio%20XBee%20Pro%20S2C.jpg" alt="Radio XBee Pro S2C" width="100">
   </p>
-* **GPS RYS352A:** Adquisición de coordenadas geoespaciales para la fase de descenso y recuperación.
+* **GPS RYS352A:** Adquisición de coordenadas para recuperación.
   <p align="center">
     <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/GPS%20RYS352A.webp" alt="GPS RYS352A" width="100">
   </p>
@@ -90,19 +114,37 @@ Comunicación asíncrona punto a punto. La topología de conexión exige el cruc
 ---
 
 ### 3. Bus SPI (Serial Peripheral Interface)
-Protocolo síncrono de alta velocidad (Full-Duplex), dedicado exclusivamente a la transferencia masiva de bloques de datos. Emplea las líneas `MOSI`, `MISO`, `SCK` y `CS`.
+**Origen:** Desarrollado por Motorola en los 80s para lograr velocidades de transferencia casi paralelas utilizando únicamente 4 cables, optimizando el espacio en silicio.
+<br>**Clasificación:** Serial, Síncrono, Full-Duplex, Maestro-Esclavo.
+
+**Anatomía de la capa física:**
+* `MOSI` (Master Out Slave In) / `COPI`: Línea de instrucción del microcontrolador al periférico.
+* `MISO` (Master In Slave Out) / `CIPO`: Línea de respuesta del periférico.
+* `SCK` (Serial Clock): Pulso cuadrado generado por el maestro que sincroniza el tráfico.
+* `CS` o `SS` (Chip Select): El maestro posee un pin CS dedicado por periférico. Al poner este pin en estado BAJO (`0V`), el periférico despierta y procesa el bus.
+* `RST` (Reset): Auxiliar externo común en módulos SPI de alta velocidad para forzar un reinicio de hardware en caso de bloqueo.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/SPI.png" alt="Diagrama SPI" width="400">
 </p>
 
 **Módulos Integrados:**
-* **Módulo Adaptador MicroSD:** Datalogger primario ("Caja Negra"). Registra las matrices de variables físicas a alta frecuencia durante todo el perfil de vuelo.
+* **Módulo Adaptador MicroSD:** Datalogger primario ("Caja Negra") para registro masivo de variables a alta frecuencia.
   <p align="center">
     <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/SD.jpg" alt="Módulo MicroSD" width="100">
   </p>
 
 **[> Consultar rutinas de escritura del Datalogger SPI]([PON_AQUI_EL_ENLACE_A_LA_CARPETA_SPI])**
+
+---
+
+## Resumen de Integración
+
+| Protocolo | Pines Mínimos | Arquitectura | Velocidad | Ventaja Principal |
+| :--- | :--- | :--- | :--- | :--- |
+| **SPI** | 4 (`MOSI`, `MISO`, `SCK`, `CS`) | Maestro-Esclavo | Muy Alta (MHz) | Transferencia masiva (Full-Duplex) |
+| **I2C** | 2 (`SDA`, `SCL`) | Multidireccional | Media (kHz) | Minimiza uso de pines |
+| **UART** | 2 (`TX`, `RX`) | Punto a Punto | Baja (Baudios) | Simplicidad extrema (Asíncrono) |
 
 ---
 
