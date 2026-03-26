@@ -72,8 +72,11 @@ Una vez instaladas las bibliotecas y con el microcontrolador conectado por USB, 
 **Navega a la ruta exacta del directorio:**
    Debes usar el comando `cd` para moverte a la ubicación específica de tu computadora donde descargaste o clonaste la carpeta que contiene el archivo de Python. Por ejemplo: 
 localizar ubucación del archvio 
+
    cd (dirección de descarga del archivo .py)
+   
 ejecutar archvo 
+
    pyton (nombre del archivo "MPU.py", "MBP.py" o "MPUMBP.py")
    
    ```bash ejemplo
