@@ -50,7 +50,7 @@ Puedes utilizar un Arduino Uno, Nano o Mega. Las conexiones I2C estándar son:
 Asegúrate de tener instalado el **Arduino IDE** y descargar la siguiente librería desde el *Gestor de Librerías*:
 *   `Adafruit BMP085 Library` (Compatible con BMP180)
 
-Carga el código fuente `telemetria_sensores.ino` en tu placa.
+Carga el código fuente `MPU.ino/MBP.ino/MPUMBP.ino` en tu placa.
 
 ### 2. Preparar el Entorno Python
 El Dashboard fue construido para ser ligero y de alto rendimiento. Requiere Python 3.7 o superior.
