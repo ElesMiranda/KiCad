@@ -78,7 +78,7 @@ localizar ubucación del archvio
    
 ejecutar archvo 
 
-   pyton (nombre del archivo "MPU.py", "MBP.py" o "MPUMBP.py")
+   pyton (nombre del archivo "`MPU.py`", "`MBP.py`" o "`MPUMBP.py`")
    
    ```bash ejemplo
    C:\Users\elesi> cd Downloads
