@@ -66,5 +66,14 @@ Abre la carpeta de la prueba que deseas realizar (ej. `MPUMBP`), carga el códig
 ### 2. Preparar el Entorno Python
 El Dashboard fue construido para ser ligero y de alto rendimiento. Requiere Python 3.7 o superior. Abre tu terminal (en Windows o Ubuntu) e instala las dependencias necesarias ejecutando:
 
+### 3. Ejecución de la Interfaz Gráfica
+Una vez instaladas las bibliotecas y con el microcontrolador conectado por USB, sigue estos pasos en tu terminal (Símbolo del sistema, PowerShell o Bash) para lanzar la telemetría:
+
+**Navega a la ruta exacta del directorio:**
+   Debes usar el comando `cd` para moverte a la ubicación específica de tu computadora donde descargaste o clonaste la carpeta que contiene el archivo de Python. Por ejemplo:
+   ```bash ejemplo
+   C:\Users\elesi> cd Downloads
+C:\Users\elesi\Downloads> python MPU.py
 ```bash
+
 pip install pyqt5 pyqtgraph PyOpenGL pyserial numpy
