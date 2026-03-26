@@ -73,7 +73,5 @@ Una vez instaladas las bibliotecas y con el microcontrolador conectado por USB, 
    Debes usar el comando `cd` para moverte a la ubicación específica de tu computadora donde descargaste o clonaste la carpeta que contiene el archivo de Python. Por ejemplo:
    ```bash ejemplo
    C:\Users\elesi> cd Downloads
-C:\Users\elesi\Downloads> python MPU.py
-```bash
-
-pip install pyqt5 pyqtgraph PyOpenGL pyserial numpy
+   
+   C:\Users\elesi\Downloads> python MPU.py
