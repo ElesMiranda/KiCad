@@ -43,7 +43,7 @@ El programa en Python lee este buffer serial, separa los valores por las comas, 
 ## Esquema de Conexión (Hardware)
 
 <p align="center">
-  <img src="https://github.com/ElesMiranda/KiCad/blob/645a818e51bba65b300c9a92cbd5c191d1af02e9/Imag/I2C.jpg" alt="Esquema de Conexión de Hardware" width="600">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/1e597d9159ca1ccaf1726ff1d0961878ded65a95/Imag/Conexiones%20MPU6050.jpg" alt="Esquema de Conexión de Hardware" width="600">
 </p>
 
 Puedes utilizar la placa de desarrollo de tu preferencia. Las conexiones I2C estándar para nuestra arquitectura son las siguientes:
