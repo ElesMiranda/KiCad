@@ -1,10 +1,10 @@
 # Sistema de Telemetría Aeroespacial (MPU6050 + BMP180)
 
 <p align="center">
-  <img src="[https://github.com/ElesMiranda/KiCad/blob/de1ce55480f78b1554e57878d151495845860f98/Imag/MBP_graf.png]" alt="Vista previa del Dashboard de Telemetría" width="800">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/de1ce55480f78b1554e57878d151495845860f98/Imag/MBP_graf.png" alt="Vista previa del Dashboard de Telemetría" width="800">
 </p>
 <p align="center">
-  <img src="[https://github.com/ElesMiranda/KiCad/blob/de1ce55480f78b1554e57878d151495845860f98/Imag/MPU_graf.png]" alt="Vista previa del Dashboard de Telemetría" width="800">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/de1ce55480f78b1554e57878d151495845860f98/Imag/MPU_graf.png" alt="Vista previa del Dashboard de Telemetría" width="800">
 </p>
 
 Un dashboard profesional en Python para visualización en tiempo real de datos inerciales y atmosféricos adquiridos mediante un microcontrolador. Este proyecto integra una IMU de 6 ejes (MPU6050) y un sensor barométrico/altímetro (BMP180) en una sola interfaz gráfica con modelado 3D y gráficas de auto-scroll.
