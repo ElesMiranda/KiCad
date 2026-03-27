@@ -1,5 +1,9 @@
 # Sistema de Telemetría Aeroespacial (MPU6050 + BMP180)
 
+<p align="center">
+  <img src="[PON_AQUI_EL_ENLACE_A_LA_FOTO_DEL_DASHBOARD_EN_PYTHON]" alt="Vista previa del Dashboard de Telemetría" width="800">
+</p>
+
 Un dashboard profesional en Python para visualización en tiempo real de datos inerciales y atmosféricos adquiridos mediante un microcontrolador. Este proyecto integra una IMU de 6 ejes (MPU6050) y un sensor barométrico/altímetro (BMP180) en una sola interfaz gráfica con modelado 3D y gráficas de auto-scroll.
 
 ## Arquitectura y Protocolos de Comunicación
@@ -7,6 +11,11 @@ Un dashboard profesional en Python para visualización en tiempo real de datos i
 Este proyecto utiliza dos capas principales de comunicación para lograr la transmisión de datos en tiempo real (50Hz) sin cuellos de botella:
 
 ### 1. Comunicación Hardware a Sensores: I2C (Inter-Integrated Circuit)
+
+<p align="center">
+  <img src="[PON_AQUI_EL_ENLACE_AL_DIAGRAMA_I2C_MAESTRO_ESCLAVO]" alt="Arquitectura del Bus I2C" width="500">
+</p>
+
 Tanto el MPU6050 como el BMP180 utilizan el protocolo **I2C**. Este es un bus de comunicación síncrona que permite conectar múltiples dispositivos usando solo dos cables:
 * **SDA (Serial Data Line):** Transmite los datos.
 * **SCL (Serial Clock Line):** Sincroniza la transmisión.
@@ -30,6 +39,10 @@ El programa en Python lee este buffer serial, separa los valores por las comas, 
 
 ## Esquema de Conexión (Hardware)
 
+<p align="center">
+  <img src="[PON_AQUI_EL_ENLACE_AL_DIAGRAMA_DE_CONEXION_O_FOTO_DEL_PROTOBOARD]" alt="Esquema de Conexión de Hardware" width="600">
+</p>
+
 Puedes utilizar la placa de desarrollo de tu preferencia. Las conexiones I2C estándar para nuestra arquitectura son las siguientes:
 
 | Pin del Sensor | Arduino Uno / Nano | ESP32 | Raspberry Pi Pico |
@@ -49,9 +62,9 @@ En la misma ubicación que este documento (`I2C.md`), se encuentran tres subdire
 
 Cada carpeta contiene tanto el firmware de adquisición en C++ (`.ino`) como el software de telemetría en Python (`.py`) correspondientes a su nivel de integración:
 
-* 📁 **`/MPU`**: Archivos `MPU.ino` y `MPU.py` (Adquisición y visualización exclusiva de la IMU de 6 ejes).
-* 📁 **`/MBP`**: Archivos `MBP.ino` y `MBP.py` (Adquisición y visualización exclusiva del barómetro/altímetro).
-* 📁 **`/MPUMBP`**: Archivos `MPUMBP.ino` y `MPUMBP.py` (Integración y fusión total de ambos sensores).
+* **`/MPU`**: Archivos `MPU.ino` y `MPU.py` (Adquisición y visualización exclusiva de la IMU de 6 ejes).
+* **`/MBP`**: Archivos `MBP.ino` y `MBP.py` (Adquisición y visualización exclusiva del barómetro/altímetro).
+* **`/MPUMBP`**: Archivos `MPUMBP.ino` y `MPUMBP.py` (Integración y fusión total de ambos sensores).
 
 ---
 
