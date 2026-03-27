@@ -1,7 +1,7 @@
 # Sistema de Registro y Reproducción de Telemetría (MPU6050 + Tarjeta SD)
 
 <p align="center">
-  <img src="[PON_AQUI_EL_ENLACE_A_LA_FOTO_DEL_DASHBOARD_EN_PYTHON]" alt="Vista previa del Dashboard de Reproducción" width="800">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/6df3cb1f88e2e9281ef96f8527bdb241f5ff2e4c/Imag/MPUSD.png" alt="Vista previa del Dashboard de Reproducción" width="800">
 </p>
 
 Un dashboard profesional en Python para la visualización y análisis de datos inerciales post-vuelo/captura. Este proyecto adquiere datos de una IMU de 6 ejes (MPU6050) a alta frecuencia (100Hz), los almacena localmente en un módulo de memoria MicroSD y permite su posterior reproducción en una interfaz gráfica con modelado 3D interactivo y gráficas temporales.
@@ -15,7 +15,7 @@ Este proyecto abandona la transmisión en vivo por cable para permitir que el ha
 ### 1. Comunicación Microcontrolador a Memoria: SPI (Serial Peripheral Interface)
 
 <p align="center">
-  <img src="[PON_AQUI_EL_ENLACE_AL_DIAGRAMA_SPI_MAESTRO_ESCLAVO]" alt="Arquitectura del Bus SPI" width="500">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/6df3cb1f88e2e9281ef96f8527bdb241f5ff2e4c/Imag/SPI.png" alt="Arquitectura del Bus SPI" width="500">
 </p>
 
 Para lograr escribir datos a alta velocidad en la tarjeta SD sin generar cuellos de botella en el muestreo de 100Hz, utilizamos el protocolo **SPI**. A diferencia del I2C, el SPI es un bus de comunicación síncrona full-duplex (puede enviar y recibir al mismo tiempo) diseñado para altas velocidades de transferencia.
@@ -34,7 +34,7 @@ El MPU6050 sigue utilizando el protocolo **I2C** (`0x68`) a una velocidad de rel
 ### 3. Almacenamiento y Decodificación (CSV)
 
 <p align="center">
-  <img src="[PON_AQUI_EL_ENLACE_A_UNA_CAPTURA_DE_PANTALLA_DEL_ARCHIVO_CSV]" alt="Estructura de datos CSV" width="400">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/b0fef77940569a5d2e06df39aef16d2f21198d1e/Imag/ConexionesSD.jpg" alt="Estructura de datos CSV" width="400">
 </p>
 
 Los datos se guardan en la memoria SD en un archivo estricto de valores separados por comas (`IMU_DATA.csv`). Cada paquete contiene 6 variables seguidas de un salto de línea (`\n`):
