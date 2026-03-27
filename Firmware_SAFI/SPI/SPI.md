@@ -1,7 +1,7 @@
 # Sistema de Registro y Reproducción de Telemetría (MPU6050 + Tarjeta SD)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/Dashboard_Playback_Preview.png" alt="Vista previa del Dashboard de Reproducción" width="800">
+  <img src="[PON_AQUI_EL_ENLACE_A_LA_FOTO_DEL_DASHBOARD_EN_PYTHON]" alt="Vista previa del Dashboard de Reproducción" width="800">
 </p>
 
 Un dashboard profesional en Python para la visualización y análisis de datos inerciales post-vuelo/captura. Este proyecto adquiere datos de una IMU de 6 ejes (MPU6050) a alta frecuencia (100Hz), los almacena localmente en un módulo de memoria MicroSD y permite su posterior reproducción en una interfaz gráfica con modelado 3D interactivo y gráficas temporales.
@@ -13,6 +13,11 @@ Un dashboard profesional en Python para la visualización y análisis de datos i
 Este proyecto abandona la transmisión en vivo por cable para permitir que el hardware sea completamente autónomo. Para lograrlo, utiliza dos protocolos de comunicación distintos operando en simultáneo:
 
 ### 1. Comunicación Microcontrolador a Memoria: SPI (Serial Peripheral Interface)
+
+<p align="center">
+  <img src="[PON_AQUI_EL_ENLACE_AL_DIAGRAMA_SPI_MAESTRO_ESCLAVO]" alt="Arquitectura del Bus SPI" width="500">
+</p>
+
 Para lograr escribir datos a alta velocidad en la tarjeta SD sin generar cuellos de botella en el muestreo de 100Hz, utilizamos el protocolo **SPI**. A diferencia del I2C, el SPI es un bus de comunicación síncrona full-duplex (puede enviar y recibir al mismo tiempo) diseñado para altas velocidades de transferencia.
 
 Utiliza 4 líneas principales:
@@ -27,6 +32,11 @@ Utiliza 4 líneas principales:
 El MPU6050 sigue utilizando el protocolo **I2C** (`0x68`) a una velocidad de reloj configurada a 400kHz para asegurar lecturas casi instantáneas de los 6 ejes (Acelerómetro y Giroscopio) y mantener el estricto ciclo de muestreo de 10ms.
 
 ### 3. Almacenamiento y Decodificación (CSV)
+
+<p align="center">
+  <img src="[PON_AQUI_EL_ENLACE_A_UNA_CAPTURA_DE_PANTALLA_DEL_ARCHIVO_CSV]" alt="Estructura de datos CSV" width="400">
+</p>
+
 Los datos se guardan en la memoria SD en un archivo estricto de valores separados por comas (`IMU_DATA.csv`). Cada paquete contiene 6 variables seguidas de un salto de línea (`\n`):
 `ax, ay, az, gx, gy, gz\n`
 
@@ -37,7 +47,7 @@ El programa en Python ya no lee el puerto serie, sino que carga este archivo loc
 ## Esquema de Conexión (Hardware)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ElesMiranda/KiCad/main/Imag/Conexiones_SD_MPU.jpg" alt="Esquema de Conexión de Hardware" width="600">
+  <img src="[PON_AQUI_EL_ENLACE_AL_ESQUEMA_DE_CONEXION_O_PROTOBOARD]" alt="Esquema de Conexión de Hardware" width="600">
 </p>
 
 El sistema requiere la integración del MPU6050, el módulo SD y un LED de estado. Las conexiones estándar para Arduino Uno/Nano son las siguientes:
@@ -67,17 +77,16 @@ El sistema requiere la integración del MPU6050, el módulo SD y un LED de estad
 
 ## Estructura del Directorio
 
-El repositorio está dividido en dos partes fundamentales:
+El repositorio unifica la adquisición y simulación en una sola carpeta principal:
 
-* **`/Arduino_Logger`**: Contiene el firmware en C++ (`logger.ino`). Es el encargado de la adquisición, inicialización del bus SPI/I2C y el control del LED de estado (apagado en calibración, parpadeo en error, encendido al grabar).
-* **`/Python_Simulator`**: Contiene la interfaz gráfica (`simulator_sd.py`). Incluye el selector de archivos y el motor de renderizado 3D para la telemetría post-captura.
+* **`/MPUSD`**: Este directorio contiene tanto el firmware de adquisición en C++ (`MPUSD.ino`) como el software de telemetría en Python (`MPUSD.py`).
 
 ---
 
 ## Requisitos y Guía de Ejecución (Software)
 
 ### 1. Preparar el Data Logger (C++)
-1. Abre el código `.ino` en tu Arduino IDE. Asegúrate de tener instalada la librería predeterminada `SD` y `Wire`.
+1. Abre el código `MPUSD.ino` en tu Arduino IDE. Asegúrate de tener instalada la librería predeterminada `SD` y `Wire`.
 2. Conecta tu hardware según la tabla superior.
 3. Inserta la tarjeta MicroSD formateada.
 4. Sube el código al microcontrolador.
