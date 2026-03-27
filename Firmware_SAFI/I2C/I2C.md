@@ -16,7 +16,7 @@ Este proyecto utiliza dos capas principales de comunicación para lograr la tran
 ### 1. Comunicación Hardware a Sensores: I2C (Inter-Integrated Circuit)
 
 <p align="center">
-  <img src="[PON_AQUI_EL_ENLACE_AL_DIAGRAMA_I2C_MAESTRO_ESCLAVO]" alt="Arquitectura del Bus I2C" width="500">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/645a818e51bba65b300c9a92cbd5c191d1af02e9/Imag/I2C.jpg" alt="Arquitectura del Bus I2C" width="500">
 </p>
 
 Tanto el MPU6050 como el BMP180 utilizan el protocolo **I2C**. Este es un bus de comunicación síncrona que permite conectar múltiples dispositivos usando solo dos cables:
