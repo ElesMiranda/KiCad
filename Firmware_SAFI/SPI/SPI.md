@@ -34,7 +34,7 @@ El MPU6050 sigue utilizando el protocolo **I2C** (`0x68`) a una velocidad de rel
 ### 3. Almacenamiento y Decodificación (CSV)
 
 <p align="center">
-  <img src="https://github.com/ElesMiranda/KiCad/blob/b0fef77940569a5d2e06df39aef16d2f21198d1e/Imag/ConexionesSD.jpg" alt="Estructura de datos CSV" width="400">
+  <img src="" alt="Estructura de datos CSV" width="400">
 </p>
 
 Los datos se guardan en la memoria SD en un archivo estricto de valores separados por comas (`IMU_DATA.csv`). Cada paquete contiene 6 variables seguidas de un salto de línea (`\n`):
@@ -47,7 +47,7 @@ El programa en Python ya no lee el puerto serie, sino que carga este archivo loc
 ## Esquema de Conexión (Hardware)
 
 <p align="center">
-  <img src="[PON_AQUI_EL_ENLACE_AL_ESQUEMA_DE_CONEXION_O_PROTOBOARD]" alt="Esquema de Conexión de Hardware" width="600">
+  <img src="https://github.com/ElesMiranda/KiCad/blob/b0fef77940569a5d2e06df39aef16d2f21198d1e/Imag/ConexionesSD.jpg" alt="Esquema de Conexión de Hardware" width="600">
 </p>
 
 El sistema requiere la integración del MPU6050, el módulo SD y un LED de estado. Las conexiones estándar para Arduino Uno/Nano son las siguientes:
